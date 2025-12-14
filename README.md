@@ -109,13 +109,4 @@ These helped me learn how errors flow through MVC layers and how to debug effect
 This project is open source under the MIT License.
 
 Made with ❤️ by Ayushman Sharma
----
 
-✅ You can now:
-- Add your real screenshots in `screenshots/` folder.
-- Push to GitHub:
-```
-git add README.md screenshots/
-git commit -m "Add complete project README with journey and screenshots"
-git push
-```
