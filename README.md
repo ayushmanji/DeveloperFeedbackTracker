@@ -69,11 +69,14 @@ Open browser at: https://localhost:7164
 
 🖼 Screenshots
 
-🔍 Developer List
+### 🔍 Developer List
+![Developer List](screenshots/Screenshot%202025-12-14%20195207.png)
 
-➕ Add Feedback Form
+### ➕ Add Feedback Form
+![Add Feedback](screenshots/Screenshot%202025-12-14%20195306.png)
 
-👤 Developer Details with Feedback
+### 👤 Developer Details with Feedback
+![Developer Details](screenshots/Screenshot%202025-12-14%20195334.png)
 
 📌 Place your screenshots inside a screenshots folder.
 
