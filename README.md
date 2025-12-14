@@ -78,7 +78,6 @@ Open browser at: https://localhost:7164
 ### 👤 Developer Details with Feedback
 ![Developer Details](screenshots/Screenshot%202025-12-14%20195334.png)
 
-📌 Place your screenshots inside a screenshots folder.
 
 🧭 Project Journey
 This project was part of my preparation for backend developer interviews. I wanted to reinforce my understanding of:
