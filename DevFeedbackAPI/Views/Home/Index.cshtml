@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DevFeedbackAPI.Models.Developer>
+
+@{
+    ViewData["Title"] = "Developer List";
+}
+
+<h2>Developer List</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var dev in Model)
+    {
+        <tr>
+            <td>@dev.Name</td>
+            <td>@dev.Email</td>
+            <td>
+                <a href="/Home/Details/@dev.Id">Details</a> |
+                <a href="/Home/Edit/@dev.Id">Edit</a> |
+                <a href="/Home/Delete/@dev.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a href="/Home/Create">Create New</a>

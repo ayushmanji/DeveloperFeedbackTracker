@@ -1,0 +1,40 @@
+﻿@model DevFeedbackAPI.Models.Feedback
+
+@{
+    ViewData["Title"] = "Add Feedback";
+}
+
+<h2>Add Feedback</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="DeveloperId" value="@ViewBag.DeveloperId" />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Message"></label>
+        <textarea asp-for="Message" class="form-control"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="Tag"></label>
+        <input asp-for="Tag" class="form-control" />
+    </div>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+
+<a asp-controller="Home" asp-action="Index">Back to List</a>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

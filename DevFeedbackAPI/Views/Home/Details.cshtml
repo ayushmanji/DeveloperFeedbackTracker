@@ -1,0 +1,36 @@
+﻿@model DevFeedbackAPI.Models.Developer
+
+@{
+    ViewData["Title"] = "Developer Details";
+}
+
+<h2>Details for @Model.Name</h2>
+
+<ul>
+    <li><strong>ID:</strong> @Model.Id</li>
+    <li><strong>Email:</strong> @Model.Email</li>
+</ul>
+
+@if (Model.Feedbacks != null && Model.Feedbacks.Any())
+{
+    <h3>Feedback</h3>
+    <ul>
+        @foreach (var feedback in Model.Feedbacks)
+        {
+            <li>
+                <strong>@feedback.Title</strong> (@feedback.CreatedAt.ToShortDateString())<br />
+                <em>@feedback.Tag</em><br />
+                @feedback.Message
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p><em>No feedback available for this developer.</em></p>
+}
+
+<a href="/Home/Index">Back to List</a>
+
+<a asp-controller="Feedback" asp-action="Create" asp-route-developerId="@Model.Id">Leave Feedback</a>
+
